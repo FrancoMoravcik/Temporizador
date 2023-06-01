@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,400;1,800&family=Raleway:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    background-image: url(img/1986b9636e733978207e85196f0846fe.jpeg);
+    background-size: cover;
+    height: 657px;
+}
+
+section {
+    height: 350px;
+    width: 850px;
+}
+
+img {
+    margin: 2px;
+}
+
+.divTiempo {
+    background-color: #33364E;
+    height: 60px;
+    width: 850px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 4px 4px 4px #2d2c445d;
+}
+
+.divBtns{
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ width: 300px;
+ }
+
+input {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 2px;
+    color: #2D2C44;
+    font-weight: 500;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    width: 92px;
+    border: none;
+    padding: 6px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: #2D2C44;
+    color: white;
+    transition: all .4s;
+}
+
+button:hover {
+    color: #2D2C44;
+    background: #ff4800;
+}
+
+.divTemporizador {
+   height: 150px;
+   width: 150px;
+   background: linear-gradient(to bottom, #2D2C44 50%, #33364E 50%);
+   box-shadow: 4px 4px 4px #2d2c445d;
+   margin-bottom: 20px;
+   border-radius: 10px;
+}
+
+p {   
+    font-size: 85px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #ff4800de 50%, #ff4800 50%); /* Cambia los colores según tus necesidades */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+/* RESPONSIVE */ 
+
+@media (max-width: 870px) { 
+
+    section {
+        height: 350px;
+        width: 570px;
+    }
+    
+    .divTiempo {
+        height: 80px;
+        width: 570px;
+    }
+
+    .divBtns{
+        margin-right: 10px;
+        width: 350px;
+        }
+       
+        label {
+            font-size: 15px;
+            padding: 10px;
+        }
+
+       input {
+        width: 100px;
+        margin-right: 25px;
+       }
+       
+       button {
+           width: 70px;
+           font-size: 13px;
+           padding: 10px;
+       }
+       
+       .divTemporizador {
+        height: 120px;
+        width: 120px;
+     }
+     
+     p {   
+         font-size: 70px;
+         margin: 3px 0px 0px 3px;
+     }
+
+}
+
+
+
+@media (max-width: 576px) {
+    section {
+        width: 400px;
+    }
+    
+    .divTiempo {
+        height: 200px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .divBtns{
+        margin-right: 0px;
+        width: 300px;
+        }
+
+    button {
+        width: 85px;
+    }
+
+    .divTemporizador {
+        height: 90px;
+        width: 90px;
+     }
+
+     p {   
+        font-size: 50px;
+        margin: 5px 0px 0px 3px;
+     }
+  }
+
+  
+@media (max-width: 400px) {
+    section {
+        width: 320px;
+    }
+
+    .divTemporizador {
+        height: 70px;
+        width: 70px;
+     }
+
+     p {   
+        font-size: 40px;
+        margin: 5px 0px 0px 3px;
+     }
+}
