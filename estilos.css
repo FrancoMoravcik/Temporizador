@@ -15,7 +15,7 @@ main{
 
 section {
     height: 350px;
-    width: 850px;
+    width: 900px;
 }
 
 img {
@@ -25,7 +25,7 @@ img {
 .divTiempo {
     background-color: #33364E;
     height: 60px;
-    width: 850px;
+    width: 1000px;
     border-radius: 10px;
     color: white;
     box-shadow: 4px 4px 4px #2d2c445d;
@@ -84,8 +84,32 @@ p {
     color: transparent;
 }
 
+a{
+    text-decoration: none;
+    color: #ff4800;
+    transition: all .4s;
+    font-size: 25px;
+    margin: 5px;
+}
+
+a:hover{
+    color: #b3b5c4;
+}
+
 
 /* RESPONSIVE */ 
+
+@media (max-width: 1000px) { 
+    .divTiempo {
+        width: 800px;
+        padding: 0px 10px;
+    }
+
+    input {
+       width: 200px;
+    }
+    
+}
 
 @media (max-width: 870px) { 
 

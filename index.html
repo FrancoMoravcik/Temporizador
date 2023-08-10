@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos.css">
     <title>Document</title>
 </head>
@@ -42,8 +43,18 @@
       </section>
     
       <div class="mt-5">
-        <a target="_blank" href="https://github.com/FrancoMoravcik"><img src="img/github (1).png" alt=""></a>
-        <a target="_blank" href="https://www.linkedin.com/in/franco-moravcik-777b4b219/"><img src="img/linkedin.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/franco-moravcik-777b4b219/" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+           </a> 
+           <a href="https://twitter.com/franco_moravcik" target="_blank">
+               <i class="fa-brands fa-square-twitter"></i>
+           </a>
+           <a href="https://github.com/FrancoMoravcik" target="_blank">
+               <i class="fa-brands fa-square-github"></i>
+           </a>
+           <a href="mailto:francomoravcik12.fm@gmail.com" target="_blank">
+               <i class="fa-regular fa-envelope"></i>
+           </a>  
       </div>
     </main>
 
@@ -52,77 +63,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-<!-- 
-let intervalId;
-let TiempoInicialUsuario;
-let tiempoRestante;
-let horaDeInicio;
-let paused = false
-
-function startTimer () {
-    const inputTiempo = document.getElementById("tiempo")
-   TiempoInicialUsuario = parseInt(inputTiempo.value)
-
-    if(isNaN (TiempoInicialUsuario) || TiempoInicialUsuario <= 0) {
-        //  alert("Por favor, ingresa un tiempo válido en segundos")
-        return;
-     }
-
-    // Si el tiempo ingresado es válido, el código borra cualquier temporizador de intervalo existente usando clearInterval(intervalId). Esto es importante para evitar que se ejecuten múltiples temporizadores simultáneamente. 
-
-    clearInterval(intervalId)
-    
-    horaDeInicio = Date.now();
-    // const tiempoDeFinalizacion = horaDeInicio + TiempoInicialUsuario * 1000;
-    tiempoRestante = TiempoInicialUsuario
-    
-    intervalId = setInterval(actualizarTemporizador, 1000)
-    
-    function actualizarTemporizador () {
-        const tiempoActual = Date.now()
-        const tiempoTranscurrido = Math.floor((tiempoActual - horaDeInicio) / 1000);
-        tiempoRestante = TiempoInicialUsuario - tiempoTranscurrido
-
-        if(tiempoRestante <= 0){
-            clearInterval(intervalId)
-            tiempoRestante = 0;
-        }
-    
-        const days = Math.floor(tiempoRestante / 86400)
-        const hours = Math.floor((tiempoRestante % 86400) / 3600)
-        const minutes = Math.floor((tiempoRestante % 3600) / 60)
-        const seconds = tiempoRestante % 60 
-
-        document.getElementById("dias").textContent = padNumber (days)
-        document.getElementById("horas").textContent = padNumber (hours)
-        document.getElementById("minutos").textContent = padNumber (minutes)
-        document.getElementById("segundos").textContent = padNumber (seconds)
-
-    }
-
-    actualizarTemporizador()
-}
-
-function pausarTiempo() {
-    clearInterval(intervalId);
-    paused = true
-}
-
-function continuarTiempo (){
-  if(paused) {
-    horaDeInicio = Date.now();
-    intervalId = setInterval(actualizarTemporizador(), 1000);
-    paused = false
-  }
- }
-
-
-function padNumber (number) {
-    return number.toString().padStart(2, "0")
-}
-
-startTimer()
-
- -->
